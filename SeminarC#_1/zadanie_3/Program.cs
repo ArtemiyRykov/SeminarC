@@ -46,7 +46,7 @@ if (number == 7)
 
 }
 
-if (number > 7 || number <= 0) 
+if (number > 7 || number <= 0)
 {
     Console.WriteLine("В неделе 7 дней. Вводи числа от 1 до 7! ");
 
