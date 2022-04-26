@@ -2,9 +2,10 @@
 Нужно использовать хотя бы одну функцию.
 456->46, 782->72, 918->98.*/
 
-int number = RandomInt(100,1000);
+// 1. Способ
+/*int number = RandomInt(100,1000);
 Console.WriteLine($"Трех значное число: {number}");
-/*int number1 = number / 100;
+int number1 = number / 100;
 int number2 = number % 10;
 int result = number1 * 10 + number2;
 
@@ -13,8 +14,11 @@ Console.WriteLine($"Первая цифра: {number1}");
 Console.WriteLine($"Третья цифра: {number2}");
 Console.WriteLine($"Вывод числа без второй цифры: {result}");*/
 
-int result = ResultInt(number);
 
+// 2. Способ
+/*int number = RandomInt(100,1000);
+Console.WriteLine($"Трех значное число: {number}");
+int result = ResultInt(number);
 Console.WriteLine($"Вывод числа без второй цифры: {result}");
 
 int ResultInt(int arg) // функция вычисления
@@ -26,6 +30,19 @@ int ResultInt(int arg) // функция вычисления
 int RandomInt(int min, int max) // Функция рандома
 {
     return new Random().Next(min, max);
-}
+}*/
 
 //Console.WriteLine(Convert.ToString(number1) + Convert.ToString(nomber2)) // - Склейка двух чисел построчно
+
+// 3. Способ
+int number = RandomInt(100,1000);
+Console.WriteLine($"Трех значное число: {number}");
+string stringNumber = Convert.ToString(number); // конвертировали int в string
+Console.WriteLine($"{stringNumber[0]}{stringNumber[2]}"); // в string как массив обозначение переменных
+
+
+
+int RandomInt(int min, int max) // Функция рандома
+{
+    return new Random().Next(min, max);
+}
