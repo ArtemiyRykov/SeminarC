@@ -15,25 +15,18 @@ WriteArray(numbers);
 Console.Write("Ведите число для поиска в массиве: ");
 int searchNumber = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i < numbers.Length; i++)
-{
-    if (numbers[i] == searchNumber)
-    {
-        Console.WriteLine($"Число {searchNumber} находится в элементе массива {i} ");
-        break;
-    }
-    else if(i == numbers.Length-1)
-    {
-        Console.WriteLine($"Число {searchNumber} НЕ находится массиве ");
-        break;
-    }
-
-}
-
-
-
-
-
+// for (int i = 0; i < numbers.Length; i++)
+// {
+//     if (numbers[i] == searchNumber)
+//     {
+//         Console.WriteLine($"Число {searchNumber} находится в элементе массива {i} ");
+//         break;
+//     }
+//     else if (i == numbers.Length - 1)// проверяем что индекс достик последнего элемента
+//     {
+//         Console.WriteLine($"Число {searchNumber} НЕ находится массиве ");
+//     }
+// }
 
 void WriteArray(int[] array)  // функция вывода массива
 {
@@ -43,3 +36,14 @@ void WriteArray(int[] array)  // функция вывода массива
     }
     Console.WriteLine();
 }
+
+// Способ 2
+for(int i =0; i <numbers.Length; i++)
+{
+    if(numbers[i]== searchNumber)
+    {
+        Console.WriteLine($"Число {searchNumber} находится в элементе массива {i} ");
+        return;
+    }
+}
+Console.WriteLine($"Число {searchNumber} НЕ находится массиве ");
