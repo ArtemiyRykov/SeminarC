@@ -15,7 +15,7 @@ WriteArray(numbers);
 int count = 0;
 for (int i = 0; i < numbers.Length; i++)
 {
-    if (numbers[i] > 10 && numbers[i] < 100)
+    if (numbers[i] >= 10 && numbers[i] < 100)
         count++;
 }
 Console.WriteLine($"Количество элементов лежащих в массиве[10, 99] = {count}");
